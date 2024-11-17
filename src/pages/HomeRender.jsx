@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Container, Button, BackButton, Logo } from "../styles/styles-home";
 import BurguerMenu from "../components/BurguerMenu";
 import SearchBar from "../components/SearchBar";
-import TypeDropdown from "../components/TypeDropdown";
+import TypeDropdown from "@/components/TypeDropdown.jsx";
 import PokemonGrid from "../components/PokemonGrid";
 import LoadingSpinner from "../components/Spinner";
 import TopButton from "../components/TopButton";
