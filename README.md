@@ -34,7 +34,6 @@ Internacionalização: Tradução dos componentes para diferentes idiomas.
 
  # Visualização do Projeto
  
-# Project Preview
 
 <img src="./src/readme_assets/01.jpg">
 <img src="./src/readme_assets/02.jpg">
