@@ -37,10 +37,11 @@ export const StyledDrawer = styled(Drawer)`
     .MuiTypography-root {
       /* color: #fff;  Cor do texto (branco) */
       font-weight: 400;
+      font-family: "Comfortaa";
 
       @media(max-width: 520px) {
-        width: 85px;
-        font-size: 14px;
+        width: 90px;
+        font-size: 13px;
       
     }
 

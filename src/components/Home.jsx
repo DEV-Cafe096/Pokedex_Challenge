@@ -1,8 +1,4 @@
 
-
-
-
-// pages/Home.js
 import { useState, useEffect } from "react";
 import { getPokemons } from "../services/pokeAPI";
 import { useTheme } from "../hooks/useTheme";
