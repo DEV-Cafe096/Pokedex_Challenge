@@ -1,0 +1,14 @@
+{
+    "title": "Pokédex",
+    "searchPlaceholder": "Search for Name or Number",
+    "attributes": "Attributes",
+    "Show more": "Show More",
+    "Light Theme": "Light Theme",
+    "Dark Theme": "Dark Theme",
+    "abilities": "Abilities",
+    "moves": "Moves",
+    "loading": "Loading...",
+    "Pokemon not_found": "Pokemon not found",
+    "abilities_title": "Abilities:",
+    "moves_title": "Moves:"
+}
