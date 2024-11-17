@@ -12,7 +12,6 @@ function App() {
         <GlobalStyle />
         <BrowserRouter>
           <Routes>
-            {/* <Route path="/" element={<Login />} /> */}
             <Route path="/" element={<Home />} />
             <Route path="/pokemon/:id" element={<PokemonDetails />} />
           </Routes>
