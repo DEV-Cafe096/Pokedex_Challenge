@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 import { Container, Button, BackButton, Logo } from "../styles/styles-home";
-import BurguerMenu from "../components/BurguerMenu";
-import SearchBar from "../components/SearchBar";
-import TypeDropdown from "../components/TypeDropdown";
-import PokemonGrid from "../components/PokemonGrid";
-import LoadingSpinner from "../components/Spinner";
-import TopButton from "../components/TopButton";
+import BurguerMenu from "./BurguerMenu";
+import SearchBar from "./SearchBar";
+import TypeDropdown from "./TypeDropdown";
+import PokemonGrid from "./PokemonGrid";
+import LoadingSpinner from "./Spinner";
+import TopButton from "./TopButton";
 import backButtonImage from "../assets/icons/Letter-X-icon_34793.ico";
 
 const HomeRender = ({
