@@ -4,7 +4,7 @@ import { getPokemons } from "../services/pokeAPI";
 import { useTheme } from "../hooks/useTheme";
 import { useAudio } from "../hooks/useAudio";
 import { useTranslation } from "react-i18next";
-import HomeRender from "../pages/HomeRender";
+import HomeRender from "./HomeRender";
 
 export const Home = () => {
     const { t, i18n } = useTranslation();
