@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Container, Button, BackButton, Logo } from "../styles/styles-home";
 import BurguerMenu from "./BurguerMenu";
 import SearchBar from "./SearchBar";
-import TypeDropdown from "./TypeDropdown";
+import Filter from "./Filter";
 import PokemonGrid from "./PokemonGrid";
 import LoadingSpinner from "./Spinner";
 import TopButton from "./TopButton";
@@ -45,7 +45,7 @@ const HomeRender = ({
             handleSearch={handleSearch}
             handleKeyPress={handleKeyPress}
         />
-        <TypeDropdown
+        <Filter
             selectedType={selectedType}
             handleTypeChange={handleTypeChange}
             pokemonTypes={pokemonTypes}

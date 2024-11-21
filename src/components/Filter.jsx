@@ -3,7 +3,7 @@ import { DropdownContainer, Select, Option } from "../styles/styles-home";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 
-const TypeDropdown = ({
+const Filter = ({
     selectedType,
     handleTypeChange,
     pokemonTypes,
@@ -29,11 +29,11 @@ const TypeDropdown = ({
     );
 };
 
-TypeDropdown.propTypes = {
+Filter.propTypes = {
     selectedType: PropTypes.string.isRequired,
     handleTypeChange: PropTypes.func.isRequired,
     pokemonTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
     currentLanguage: PropTypes.string.isRequired,
 };
 
-export default TypeDropdown;
+export default Filter;
