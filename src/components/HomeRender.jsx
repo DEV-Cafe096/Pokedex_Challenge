@@ -7,6 +7,7 @@ import PokemonGrid from "./PokemonGrid";
 import LoadingSpinner from "./Spinner";
 import TopButton from "./TopButton";
 import backButtonImage from "../assets/icons/Letter-X-icon_34793.ico";
+import LogoPokemon from "../assets/logo.svg";
 
 const HomeRender = ({
     isDarkTheme,
@@ -38,7 +39,7 @@ const HomeRender = ({
             language={language}
             t={t}
         />
-        <Logo src="/src/assets/logo.svg" />
+        <Logo img src={LogoPokemon} />
         <SearchBar
             query={query}
             setQuery={setQuery}
