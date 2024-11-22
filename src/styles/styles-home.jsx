@@ -81,12 +81,13 @@ export const Search = styled.input`
 
     @media(max-width: 520px) {
         width: 380px;
+        font-size: 18px;
     }
 
     @media(max-width: 420px) {
         width: 300px;
         &::placeholder {
-        font-size: 16px; 
+        font-size: 14px; 
         font-weight: 500;
     }
     }
