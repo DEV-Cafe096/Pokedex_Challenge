@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { getPokemonById, getDescriptions } from '../services/pokeAPI';
+import { getPokemonById, getDescriptions, capitalizeFirstLetter } from '../services/pokeAPI';
 import {
     Container, PokemonImage, Title, TypesContainer, Type, DetailsList, DetailItem, CardDetails,
     ButtonGroup, Button, DescriptionItem, MoveNameDescription, TitleInfo, ReturnImg, ButtonReturn
@@ -20,7 +20,6 @@ import { useTheme } from '../hooks/useTheme';
 import { useAudio } from '../hooks/useAudio';
 import { useTranslation } from 'react-i18next';
 import { StyledDrawer } from '../styles/style-burguer-button';
-
 
 
 
@@ -49,7 +48,9 @@ export const PokemonDetails = () => {
             setIsLoading(true);
             try {
                 const data = await getPokemonById(id);
-                setPokemon(data);
+
+                const capitalizedPokemon = { ...data, name: capitalizeFirstLetter(data.name) };
+                setPokemon(capitalizedPokemon);
                 const { abilitiesWithDescriptions, movesWithDescriptions } = await getDescriptions(data.abilities, data.moves);
                 setAbilityDescriptions(abilitiesWithDescriptions);
                 setMoveDescriptions(movesWithDescriptions);
