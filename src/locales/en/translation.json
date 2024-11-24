@@ -10,5 +10,8 @@
     "loading": "Loading...",
     "Pokemon not_found": "Pokemon not found",
     "abilities_title": "Abilities:",
-    "moves_title": "Moves:"
+    "moves_title": "Moves:",
+    "Song": "Song",
+    "description_not_available": "Description not available",
+    "erro_ao_buscar_descricao": "Error fetching description"
 }

@@ -50,24 +50,32 @@ export const getPokemonById = async (id) => {
 
 
 export const getDescriptions = async (abilities, moves) => {
+    const languageCode = i18n.language;
+    console.log("Idioma selecionado:", languageCode);
+
     try {
-        const languageCode = i18n.language;  // Define o idioma com base no i18n
         const abilityPromises = abilities.map(async (ability) => {
-            const response = await fetch(ability.ability.url);
-            const data = await response.json();
-            const effectEntry = data.effect_entries.find(entry => entry.language.name === languageCode);
-            const description = effectEntry ? effectEntry.effect : 'Descrição não disponível';
-            const truncatedDescription = description.length > 100 ? description.slice(0, 89) + '...' : description;
-            return { name: ability.ability.name, description: truncatedDescription };
+            try {
+                const response = await fetch(ability.ability.url);
+                const data = await response.json();
+                const description = await getAbilityDescription(data, languageCode);
+                return { name: ability.ability.name, description: description };
+            } catch (error) {
+                console.error(`Erro ao buscar descrição da habilidade ${ability.ability.name}:`, error);
+                return { name: ability.ability.name, description: i18n.t('erro_ao_buscar_descricao') };
+            }
         });
 
         const movePromises = moves.map(async (move) => {
-            const response = await fetch(move.move.url);
-            const data = await response.json();
-            const effectEntry = data.effect_entries.find(entry => entry.language.name === languageCode);
-            const description = effectEntry ? effectEntry.effect : 'Descrição não disponível';
-            const truncatedDescription = description.length > 100 ? description.slice(0, 89) + '...' : description;
-            return { name: move.move.name, description: truncatedDescription };
+            try {
+                const response = await fetch(move.move.url);
+                const data = await response.json();
+                const description = await getMoveDescription(data, languageCode);
+                return { name: move.move.name, description: description };
+            } catch (error) {
+                console.error(`Erro ao buscar descrição do movimento ${move.move.name}:`, error);
+                return { name: move.move.name, description: i18n.t('erro_ao_buscar_descricao') };
+            }
         });
 
         const abilitiesWithDescriptions = await Promise.all(abilityPromises);
@@ -75,9 +83,28 @@ export const getDescriptions = async (abilities, moves) => {
 
         return { abilitiesWithDescriptions, movesWithDescriptions };
     } catch (error) {
-        console.error("Erro ao buscar descrições:", error);
+        console.error("Erro geral ao buscar descrições:", error);
         return { abilitiesWithDescriptions: [], movesWithDescriptions: [] };
     }
 };
 
 
+const getAbilityDescription = async (data, languageCode) => {
+    return await getDescription(data.effect_entries, languageCode, 'effect');
+}
+
+const getMoveDescription = async (data, languageCode) => {
+    return await getDescription(data.flavor_text_entries, languageCode, 'flavor_text');
+}
+
+const getDescription = async (entries, languageCode, field) => {
+    if (!entries) return i18n.t('descricao_indisponivel');
+
+    const ptEntry = entries.find(entry => entry.language.name === languageCode);
+    if (ptEntry && ptEntry[field]) return ptEntry[field];
+
+    const enEntry = entries.find(entry => entry.language.name === 'en');
+    if (enEntry && enEntry[field]) return enEntry[field];
+
+    return i18n.t('descricao_indisponivel');
+};

@@ -83,7 +83,7 @@ export const PokemonDetails = () => {
     return (
         <Container>
             {/* Ícone de Menu para abrir o Drawer */}
-            <BurguerButton edge="start" aria-label="menu" onClick={toggleDrawer(true)}>
+            <BurguerButton  aria-label="menu" onClick={toggleDrawer(true)}>
                 <MenuIcon style={{ fontSize: '2.5em' }} />
             </BurguerButton>
 
@@ -136,10 +136,10 @@ export const PokemonDetails = () => {
                 </TypesContainer>
 
                 <ButtonGroup>
-                    <Button onClick={() => setActiveTab('abilities')} active={activeTab === 'abilities' ? 'true' : 'false'}>
+                    <Button onClick={() => setActiveTab('abilities')} active={activeTab === 'abilities'}>
                         {t('abilities')}
                     </Button>
-                    <Button onClick={() => setActiveTab('moves')} active={activeTab === 'moves' ? 'true' : 'false'}>
+                    <Button onClick={() => setActiveTab('moves')} active={activeTab === 'moves'}>
                         {t('moves')}
                     </Button>
                 </ButtonGroup>

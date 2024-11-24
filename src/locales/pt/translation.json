@@ -11,5 +11,7 @@
     "Pokemon not_found": "Pokémon não encontrado",
     "abilities_title": "Habilidades:",
     "moves_title": "Movimentos:",
-    "Song": "Musica"
+    "Song": "Musica",
+    "description_not_available": "Descrição não disponível",
+    "erro_ao_buscar_descricao": "Erro ao buscar descrição"
 }
