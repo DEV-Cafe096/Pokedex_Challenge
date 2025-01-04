@@ -1,8 +1,10 @@
 import { createContext, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import PropTypes from 'prop-types';
-import lightImage from '../assets/LightTheme.gif';
-import darkImage from '../assets/DarkTheme.gif'
+// import lightImage from '../assets/LightTheme.gif';
+import lightImage from '../assets/light_theme.png';
+import darkImage from '../assets/dark_theme.png';
+// import darkImage from '../assets/DarkTheme.gif'
 
 // Definindo os temas claro e escuro
 const lightTheme = {
