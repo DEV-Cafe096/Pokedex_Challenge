@@ -16,7 +16,7 @@ const TopButton = () => {
             const clientHeight = document.documentElement.clientHeight;
 
             // Define visibilidade do botão próximo ao final da página
-            if (scrollTop + clientHeight >= scrollHeight - 50) {
+            if (scrollTop + clientHeight >= scrollHeight - 250) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);
