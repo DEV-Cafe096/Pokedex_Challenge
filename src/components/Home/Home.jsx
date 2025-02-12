@@ -26,9 +26,9 @@ export const Home = () => {
         setLanguage(lng);
     };
 
-    const getPokemonTypes = async (language) => {
+    const getPokemonTypes = async () => {
         try {
-            const module = await import(`../../locales/${language}/pokemonTypes.json`);
+            const module = await import(`../../locales/en/pokemonTypes.json`);
             return module.default;
         } catch (error) {
             console.error("Erro ao carregar os tipos de Pokémon:", error);

@@ -1,7 +1,6 @@
 // src/components/BackToTopButton.jsx
 import { useState, useEffect } from "react";
 import { ButtonStart } from "./style";
-
 import { useTheme } from "@hooks/useTheme";
 import { FaArrowUp } from "react-icons/fa";
 
