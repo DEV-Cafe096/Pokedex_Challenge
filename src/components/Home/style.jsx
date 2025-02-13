@@ -252,6 +252,7 @@ export const Select = styled.select`
 export const Option = styled.option`
     background-color: ${({ theme }) => theme.cardBackground};
     color: ${({ theme }) => theme.text};
+    text-transform: capitalize;
 `;
 
 

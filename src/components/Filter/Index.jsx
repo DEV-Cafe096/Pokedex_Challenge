@@ -12,8 +12,12 @@ const Filter = ({
     const { t } = useTranslation();
 
     useEffect(() => {
+        console.log(pokemonTypes);
+        
     // Este useEffect será executado quando o idioma ou os pokemonTypes mudarem
     }, [currentLanguage, pokemonTypes]);
+
+    
 
     return (
     <DropdownContainer>
@@ -21,7 +25,7 @@ const Filter = ({
         <Option value="">{t("attributes")}</Option>
         {pokemonTypes.map((type) => (
             <Option key={type} value={type}>
-            {t(type)}
+            {t(`${type}`)}
             </Option>
         ))}
         </Select>

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ThemeButton, LanguageSwitcherContainer } from "../Home/styles-home";
+import { ThemeButton, LanguageSwitcherContainer } from "../Home/style";
 import englishFlag from "../assets/icons/en.png";
 import portugueseFlag from "../assets/icons/pt.png";
 
