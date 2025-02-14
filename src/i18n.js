@@ -9,14 +9,18 @@ import pokemonTypesPT from "../src/locales/pt/pokemonTypes.json";
 
 const resources = {
     en: {
-        translation: translationEN,
-        pokemonTypes: pokemonTypesEN,
+        translation: {
+            ...translationEN,
+            ...pokemonTypesEN,
+        },
+
     },
 
     pt: {
-        translation: translationPT,
-        pokemonTypes: pokemonTypesPT,
-
+        translation: {
+            ...translationPT,
+            ...pokemonTypesPT,
+        },
     },
 };
 

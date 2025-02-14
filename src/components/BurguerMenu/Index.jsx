@@ -8,10 +8,14 @@ import MoonIcon from '@mui/icons-material/NightsStay'; // Icone para tema escuro
 import MusicNoteIcon from '@mui/icons-material/MusicNote'; // Ícone de música
 import PropTypes from "prop-types";
 import { BurguerButton, StyledDrawer } from "../../styles/style-burguer-button";
+import i18n from "../../i18n"
 
-const BurguerMenu = ({ isDarkTheme, toggleTheme, toggleAudio, handleChangeLanguage, t }) => {
+
+const BurguerMenu = ({ isDarkTheme, toggleTheme, toggleAudio, t }) => {
     // Estado para controlar o menu hamburguer
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const changeLanguage = (language) => i18n.changeLanguage(language);
+
 
     const toggleDrawer = (open) => () => {
         setIsDrawerOpen(open);
@@ -36,7 +40,7 @@ const BurguerMenu = ({ isDarkTheme, toggleTheme, toggleAudio, handleChangeLangua
                     </ListItem>
 
                     {/* Alternar idioma para inglês */}
-                    <ListItem button onClick={() => handleChangeLanguage('en')}>
+                    <ListItem button onClick={() => changeLanguage('en')}>
                         <ListItemIcon>
                             <img src={EnglishFlagIcon} alt="English" width={24} height={24} />
                         </ListItemIcon>
@@ -44,7 +48,7 @@ const BurguerMenu = ({ isDarkTheme, toggleTheme, toggleAudio, handleChangeLangua
                     </ListItem>
 
                     {/* Alternar idioma para português */}
-                    <ListItem button onClick={() => handleChangeLanguage('pt')}>
+                    <ListItem button onClick={() => changeLanguage('pt')}>
                         <ListItemIcon>
                             <img src={PortugueseFlagIcon} alt="Português" width={24} height={24} />
                         </ListItemIcon>

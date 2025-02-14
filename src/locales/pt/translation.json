@@ -8,7 +8,7 @@
     "abilities": "Habilidades",
     "moves": "Movimentos",
     "loading": "Carregando...",
-    "Pokemon not_found": "Pokémon não encontrado",
+    "pokemonNotFoundAlert": "Pokémon não encontrado",
     "abilities_title": "Habilidades:",
     "moves_title": "Movimentos:",
     "Song": "Musica",

@@ -12,7 +12,7 @@ const Filter = ({
     const { t } = useTranslation();
 
     useEffect(() => {
-        console.log(pokemonTypes);
+        // console.log(pokemonTypes);
         
     // Este useEffect será executado quando o idioma ou os pokemonTypes mudarem
     }, [currentLanguage, pokemonTypes]);

@@ -7,8 +7,7 @@ import { useTranslation } from "react-i18next";
 import HomeRender from "./HomeRender";
 
 export const Home = () => {
-    const { t, i18n } = useTranslation();
-    const [language, setLanguage] = useState(i18n.language);
+    const { t } = useTranslation();
     const [pokemonData, setPokemonsData] = useState([]);
     const [filteredPokemonData, setFilteredPokemonData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -21,10 +20,7 @@ export const Home = () => {
     const { isDarkTheme, toggleTheme } = useTheme();
     const { toggleAudio } = useAudio();
 
-    const handleChangeLanguage = (lng) => {
-        i18n.changeLanguage(lng);
-        setLanguage(lng);
-    };
+
 
     const getPokemonTypes = async () => {
         try {
@@ -40,7 +36,7 @@ export const Home = () => {
         const fetchData = async () => {
             setIsLoading(true);
             try {
-                const types = await getPokemonTypes(i18n.language);
+                const types = await getPokemonTypes();
                 setPokemonTypes(types);
 
                 const data = await getPokemons(151, 0);
@@ -70,7 +66,7 @@ export const Home = () => {
         };
 
         fetchData();
-    }, [i18n.language]);
+    },[]);
 
     const handleSearch = () => {
         if (query.trim() === "") {
@@ -128,8 +124,8 @@ export const Home = () => {
             isDarkTheme={isDarkTheme}
             toggleTheme={toggleTheme}
             toggleAudio={toggleAudio}
-            handleChangeLanguage={handleChangeLanguage}
-            language={language}
+            // handleChangeLanguage={handleChangeLanguage}
+            // language={language}
             t={t}
             query={query}
             setQuery={setQuery}
