@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import './style.jsx';
+import './style.js';
 
 
 
@@ -202,19 +202,7 @@ export const ThemeToggle = styled.button`
     }
 `;
 
-// export const MusicButton = styled.button`
-//     background: none;
-//     border: none;
-//     cursor: pointer;
-//     position: absolute;
-//     top: 12px; // Ajuste para a distância do topo
-//     left: 10px; // Distância do lado direito
-    
-//     img {
-//         width: 60px; // Tamanho do ícone
-//         height: auto;
-//     }
-// `;
+
 
 export const DropdownContainer = styled.div`
     display: flex;
@@ -253,6 +241,11 @@ export const Option = styled.option`
     background-color: ${({ theme }) => theme.cardBackground};
     color: ${({ theme }) => theme.text};
     text-transform: capitalize;
+
+    &:hover {
+        background-color: ${({ theme }) => theme.hoverBackground};
+        color: ${({ theme }) => theme.hoverText};
+    }
 `;
 
 

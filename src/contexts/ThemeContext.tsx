@@ -2,7 +2,7 @@ import React, { createContext, useState, useContext } from 'react';
 import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 import lightImage from '@assets/01.jpg';
-import darkImage from '../assets/dark_theme.png';
+import darkImage from '../assets/02.jpg';
 
 const lightTheme = {
     text: "#000",
@@ -22,17 +22,17 @@ const lightTheme = {
 
 const darkTheme = {
     text: "#fff",
-    cardBackground: "#001",
-    buttonBackground: "#5000ac",
-    buttonShowmore: "#5000ac",
+    cardBackground: "#002",
+    buttonBackground: "#203A8F",
+    buttonShowmore: "#002",
     backgroundImage: darkImage,
-    borderColor: "#5000ac",
+    borderColor: "#203A8F",
     buttonHoverBackground: "#333",
-    typeBackground: '#5000ac',
+    typeBackground: '#203A8F',
     typeColor: '#ffffff',
-    drawerBackground: "#5000ac",
+    drawerBackground: "#203A8F",
     drawerHover: "#333",
-    topBtn: "#5000ac",
+    topBtn: "#203A8F",
     colorbtnTop: "#ffffff"
 };
 

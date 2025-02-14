@@ -26,9 +26,9 @@
       "@types/*": ["src/types/*"],
       "@pages/*": ["src/pages/*"],
       "@routes/*": ["src/routes/*"],
-      "@api/*": ["src/api/*"],
-      
+      "@api/*": ["src/api/*"]
+    },
+    // "typeRoots": ["./node_modules/@types", "./"]  
   },
-  } ,
   "include": ["src"]
 }
