@@ -2,7 +2,7 @@ import React, { createContext, useState, useContext } from 'react';
 import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 import lightImage from '@assets/01.jpg';
-import darkImage from '../assets/02.jpg';
+import darkImage from '../assets/03.jpg';
 
 const lightTheme = {
     text: "#000",

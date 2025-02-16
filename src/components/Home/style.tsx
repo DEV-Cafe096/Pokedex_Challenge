@@ -117,27 +117,22 @@ export const Logo = styled.img`
         transform: scale(1);
     }
 }
-
-
 `;
 
 
-
-
-
 export const Button = styled.button`
-    padding: 5px 35px;
+    padding: 7px 30px;
     font-size: 26px;
     border-radius: 10px;
     margin-bottom: 20px;
-    font-weight: 500;
+    font-weight: 600;
     background-color: ${({ theme }) => theme.buttonShowmore};
     color: ${({ theme }) => theme.text};
 
     &:hover{
-        background-color: ${({ theme }) => theme.buttonHoverBackground}; // Alterar cor no hover para algo diferente
+        background-color: ${({ theme }) => theme.buttonHoverBackground}; 
         color: ${({ theme }) => theme.text};
-        transition: 0.3s ease;
+        transition: 0.5s ease-in-out;
     }
 
     @media(min-width: 1950px) {

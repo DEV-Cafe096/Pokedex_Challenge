@@ -13,7 +13,7 @@
     "module": "esnext",
     "allowSyntheticDefaultImports": true,
     "noEmit": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@components/*": ["src/components/*"],
       "@hooks/*": ["src/hooks/*"],
@@ -26,9 +26,9 @@
       "@types/*": ["src/types/*"],
       "@pages/*": ["src/pages/*"],
       "@routes/*": ["src/routes/*"],
-      "@api/*": ["src/api/*"]
+      "@api/*": ["src/api/*"],
+      "@i18n/*": ["src/i18n/*"]
     },
-    // "typeRoots": ["./node_modules/@types", "./"]  
   },
   "include": ["src"]
 }
