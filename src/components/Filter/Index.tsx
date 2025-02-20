@@ -36,11 +36,6 @@ const Filter: React.FC<FilterProps> = ({
     );
 };
 
-Filter.propTypes = {
-    selectedType: PropTypes.string.isRequired,
-    handleTypeChange: PropTypes.func.isRequired,
-    pokemonTypes: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-    currentLanguage: PropTypes.string.isRequired,
-};
+
 
 export default Filter;

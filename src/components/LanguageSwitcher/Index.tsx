@@ -1,9 +1,14 @@
 import PropTypes from 'prop-types';
 import { ThemeButton, LanguageSwitcherContainer } from "../Home/style";
-import englishFlag from "../assets/icons/en.png";
-import portugueseFlag from "../assets/icons/pt.png";
+import englishFlag from "@assets/icons/en.png";
+import portugueseFlag from "@assets/icons/pt.png";
 
-const LanguageSwitcher = ({ onChangeLanguage }) => {
+
+interface LanguageSwitcherProps {
+    onChangeLanguage: (language: string) => void;
+}
+
+const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ onChangeLanguage }) => {
     return (
         <LanguageSwitcherContainer>
             <ThemeButton onClick={() => onChangeLanguage("en")}>

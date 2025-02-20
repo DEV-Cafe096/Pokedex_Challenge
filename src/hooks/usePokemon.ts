@@ -1,25 +1,33 @@
-// src/hooks/usePokemon.js
 import { useState, useEffect } from "react";
-import { getPokemons } from "../services/pokeAPI";
+import { getPokemons } from "@services/pokeAPI";
+
+// Definindo interfaces para os tipos de dados
+interface Pokemon {
+    name: string;
+    url: string;
+    id: number;
+    types: string[];
+    imageUrl: string;
+}
 
 export const usePokemon = () => {
-    const [pokemonData, setPokemonsData] = useState([]);
-    const [filteredPokemonData, setFilteredPokemonData] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const [query, setQuery] = useState('');
-    const [selectedType, setSelectedType] = useState("");
+    const [pokemonData, setPokemonsData] = useState<Pokemon[]>([]);
+    const [filteredPokemonData, setFilteredPokemonData] = useState<Pokemon[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [query, setQuery] = useState<string>('');
+    const [selectedType, setSelectedType] = useState<string>("");
 
     useEffect(() => {
         const fetchPokemons = async () => {
             setIsLoading(true);
             try {
                 const data = await getPokemons(151, 0);
-                const pokemonPromises = data.results.map(async (pokemon) => {
+                const pokemonPromises = data.results.map(async (pokemon: Pokemon) => {
                     const response = await fetch(pokemon.url);
                     const details = await response.json();
                     return {
                         ...pokemon,
-                        types: details.types.map(type => type.type.name),
+                        types: details.types.map((type: any) => type.type.name),
                         imageUrl:
                             details.sprites?.other.dream_world.front_default ||
                             details.sprites?.other.home.front_default ||
@@ -70,7 +78,7 @@ export const usePokemon = () => {
         setQuery('');
     };
 
-    const handleTypeChange = (event) => {
+    const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const selectedType = event.target.value;
         setSelectedType(selectedType);
 

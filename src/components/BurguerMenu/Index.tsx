@@ -13,7 +13,10 @@ interface BurguerMenuProps {
     isDarkTheme: boolean;
     toggleTheme: () => void;
     toggleAudio: () => void;
+    handleChangeLanguage?: () => void;
+    language?: string;
     t: (key: string) => string;
+    
 }
 
 const BurguerMenu: React.FC<BurguerMenuProps> = ({ isDarkTheme, toggleTheme, toggleAudio, t }) => {

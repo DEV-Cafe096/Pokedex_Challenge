@@ -62,3 +62,33 @@ declare module "@i18n" {
     export default i18n;
 }
 
+
+declare module "@components/PokemonGrid/style"{
+    export const PokemonList: any;
+    export const PokemonLink: any;
+    export const PokemonCard: any;
+    export const PokemonName: any;
+    export const PokemonImage: any;
+}
+
+declare module "@services/pokeAPI" {
+    export const getPokemons: any;
+    export const getPokemonById: any;
+    export const getMoveDescription: any;
+    export const getAbilityDescription: any;
+}
+
+declare module "@hooks/useAudio" {
+    export const useAudio: any;
+}
+
+declare module "@hooks/useTheme" {
+    export const useTheme: any;
+}
+
+declare module "@hooks/usePokemon" {
+    export const usePokemon: any;
+}
+
+declare module '@components/SearchBar/Index';
+declare module '@components/Spinner/Index';
