@@ -20,6 +20,7 @@ export const Home: React.FC = () => {
         isLoading,
         query,
         setQuery,
+        isSearching,
         handleSearch,
         handleResetSearch,
         handleTypeChange,
@@ -27,7 +28,6 @@ export const Home: React.FC = () => {
     } = usePokemon();
 
     const [itemsToShow, setItemsToShow] = useState<number>(10);
-    const [isSearching, setIsSearching] = useState<boolean>(false);
     const [pokemonTypes, setPokemonTypes] = useState<PokemonType>({});
 
     const getPokemonTypes = async (): Promise<PokemonType> => {

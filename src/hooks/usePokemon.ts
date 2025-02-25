@@ -16,6 +16,7 @@ export const usePokemon = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [query, setQuery] = useState<string>('');
     const [selectedType, setSelectedType] = useState<string>("");
+    const [isSearching, setIsSearching] = useState<boolean>(false);
 
     useEffect(() => {
         const fetchPokemons = async () => {
@@ -68,6 +69,7 @@ export const usePokemon = () => {
             setFilteredPokemonData(pokemonData);
         } else {
             setFilteredPokemonData(filteredPokemons);
+            setIsSearching(true);
         }
 
         setQuery('');
@@ -75,6 +77,7 @@ export const usePokemon = () => {
 
     const handleResetSearch = () => {
         setFilteredPokemonData(pokemonData);
+        setIsSearching(false);
         setQuery('');
     };
 
@@ -98,6 +101,7 @@ export const usePokemon = () => {
         isLoading,
         query,
         setQuery,
+        isSearching,
         handleSearch,
         handleResetSearch,
         handleTypeChange,
