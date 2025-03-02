@@ -35,15 +35,15 @@ Internacionalização: Tradução dos componentes para diferentes idiomas.
  # Visualização do Projeto
  
 
-<img src="./src/readme_assets/01.jpg">
-<img src="./src/readme_assets/02.jpg">
-<img src="./src/readme_assets/03.jpg">
-<img src="./src/readme_assets/04.jpg">
-<img src="./src/readme_assets/05.jpg">
-<img src="./src/readme_assets/06.jpg">
-<img src="./src/readme_assets/07.jpg">
-<img src="./src/readme_assets/08.jpg">
-<img src="./src/readme_assets/09.jpg">
+<img src="./src/readme_assets/01.png">
+<img src="./src/readme_assets/02.png">
+<img src="./src/readme_assets/03.png">
+<img src="./src/readme_assets/04.png">
+<img src="./src/readme_assets/05.png">
+<img src="./src/readme_assets/06.png">
+<img src="./src/readme_assets/07.png">
+<img src="./src/readme_assets/08.png">
+<img src="./src/readme_assets/09.png">
 
 
 
